@@ -9,7 +9,7 @@ document.getElementById('btn').addEventListener('click', function(){
 	}
 	else{
 		reject({data:false});
-	}
+	},4000
 });
 
 	proms.then((data)=>{
