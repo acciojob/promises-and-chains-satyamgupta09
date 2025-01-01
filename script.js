@@ -9,8 +9,8 @@ document.getElementById('btn').addEventListener('click', function(){
 	}
 	else{
 		reject({data:false});
-	},4000
-});
+	}
+},4000);
 
 	proms.then((data)=>{
 	alert(`Welcome, ${name}. You can vote.`);
