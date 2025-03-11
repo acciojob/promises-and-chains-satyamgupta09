@@ -4,11 +4,15 @@ document.getElementById('btn').addEventListener('click', function(){
     let age=document.getElementById('age').value;
 
 	let proms = new Promise((resolve, reject)=>{
-		setInterval(()=>{
-			if(age>18) resolve({data:true});
-			else reject({data:false});
+		setTimeout(()=>{
+			if(age>18){
+				return resolve({data:true})
+			}
+			else{
+				return reject({data:false})
+			}
 		},4000);
-	});
+	})
 
 	proms.then((data)=>{
 	alert(`Welcome, ${name}. You can vote.`);
