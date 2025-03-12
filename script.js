@@ -13,5 +13,5 @@ document.getElementById("btn").addEventListener('click', function(){
 		},4000);
 	})
 
-	proms.then((data)=> data=="y" ? alert('Welcome, . You can vote.') : alert(`Oh sorry . You aren't old enough.`)).catch();
+	proms.then((data)=> data=="y" ? alert(`Welcome, ${name}. You can vote.`) : alert(`Oh sorry ${name}. You aren't old enough.`)).catch();
 })
