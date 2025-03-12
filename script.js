@@ -1,23 +1,17 @@
-//your JS code here. If required.
-document.getElementById('btn').addEventListener('click', function(){
-	let name= document.getElementById('name').value;
-    let age=document.getElementById('age').value;
+document.getElementById("btn").addEventListener('click', function(){
+	let age = document.getElementById('age').value;
+	let name = document.getElementById('name').value;
 
 	let proms = new Promise((resolve, reject)=>{
 		setTimeout(()=>{
 			if(age>18){
-				return resolve({data:true})
+				resolve("y");
 			}
 			else{
-				return reject({data:false})
+				resolve("n");
 			}
 		},4000);
 	})
 
-	proms.then((data)=>{
-	alert(`Welcome, ${name}. You can vote.`);
-}).catch((error)=>{
-	alert(`Oh sorry ${name}. You aren't old enough.`);
-});
+	proms.then((data)=> data=="y" ? alert('Welcome, . You can vote.') : alert(`Oh sorry . You aren't old enough.`)).catch();
 })
-
