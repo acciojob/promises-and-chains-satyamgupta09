@@ -1,5 +1,5 @@
 document.getElementById('btn').addEventListener('click',function(){
-	let age=pareseInt(document.getElementById("age").value);
+	let age=parseInt(document.getElementById("age").value);
 	let name=document.getElementById("name").value;
 	
 	// let prom = new Promise((resolve, reject)=>{
