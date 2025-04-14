@@ -12,15 +12,15 @@ document.getElementById('btn').addEventListener('click',function(){
 	let prom  = new Promise((resolve, reject)=>{
 		setTimeout(()=>{
 			if(age>18){
-				resolve('y');
+				resolve();
 			}
 			else{
-				reject('n')
+				reject();
 			}
 		},4000);
 	})
 
-	prom.then((data)=> data=='y' ? alert(`Welcome, ${name}. You can vote.`) : alert(`Oh sorry ${name}. You aren't old enough.`))
+	prom.then(()=> alert(`Welcome, ${name}. You can vote.`)).catch(()=>alert(`Oh sorry ${name}. You aren't old enough.`))
 	
 })
 
